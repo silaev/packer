@@ -31,9 +31,9 @@ public class PropertyServiceImpl extends AbstractService implements PropertyServ
         this.maxCost =
             new BigDecimal(properties.getProperty("maxCost", "100"));
         this.itemLimit =
-            new Integer(properties.getProperty("itemLimit", "15"));
+            Integer.parseInt(properties.getProperty("itemLimit", "15"));
         this.weightScale =
-            new Integer(properties.getProperty("weightScale", "2"));
+            Integer.parseInt(properties.getProperty("weightScale", "2"));
     }
 
     @SneakyThrows

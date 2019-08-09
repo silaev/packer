@@ -46,7 +46,7 @@ public class PackerUtil {
         private Item mapItem(String itemString) {
             String[] item = itemString.split("\\s*,\\s*");
             return Item.builder()
-                .indexNumber(new Integer(item[0]))
+                .indexNumber(Integer.valueOf(item[0]))
                 .weight(new BigDecimal(item[1]))
                 .cost(new BigDecimal(item[2]))
                 .build();
