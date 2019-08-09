@@ -20,7 +20,7 @@ public class Packer {
 
     public static void main(String[] args) throws APIException {
 
-        if (args.length==0 || StringUtils.isBlank(args[0])) {
+        if (args.length == 0 || StringUtils.isBlank(args[0])) {
             throw new IllegalArgumentException("Please, provide a filePath.");
         }
 

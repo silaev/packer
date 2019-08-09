@@ -33,7 +33,7 @@ public class PackerUtil {
 
     public static class StringToItemsArray extends SimpleArgumentConverter {
         @Override
-        protected Object convert(Object source, Class<?> targetType) throws ArgumentConversionException {
+        protected Item[] convert(Object source, Class<?> targetType) throws ArgumentConversionException {
             //1, 53.38, 45; 3, 78.48, 3
             String[] groups = ((String) source).split("\\s*;\\s*");
             return Stream.of(groups)
@@ -55,7 +55,7 @@ public class PackerUtil {
 
     public static class CSVtoArray extends SimpleArgumentConverter {
         @Override
-        protected Object convert(Object source, Class<?> targetType) throws ArgumentConversionException {
+        protected String[] convert(Object source, Class<?> targetType) throws ArgumentConversionException {
             String s = (String) source;
             return s.split("\\s*,\\s*");
         }
